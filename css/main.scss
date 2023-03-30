@@ -1,0 +1,290 @@
+@import "scss/bootstrap";
+
+//fonts
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
+
+
+
+//font variables
+$theme_font: 'Inter', sans-serif;
+
+
+body{
+    font: $theme_font;
+}
+
+// color variales
+
+$white: #ffffff;
+$black: #000000;
+$blue: #EFF8FF;
+$d_blue: #002573;
+$deep_blue: #010164;
+$orange: #A3B8BD;
+$l_blue: #2C2048;
+$yellow: #F5980C;
+$see_blue: #90C3D8;
+
+
+//styling of buttons
+
+.btn:focus {
+    box-shadow: 0 0 0 0;
+}
+
+.btn_white-fill {
+    background-color: $white;
+
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+
+// styling of theam buttons
+
+
+.btn{
+    border: 1px solid transparent;
+    text-transform: capitalize;
+    transition: all .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-size: calc(.8rem + .3vw);
+    font-weight: 400;
+}
+
+
+.btn_blue-fill {
+    background-color: $blue;
+    color: $d_blue;
+    padding: .5rem 1rem;
+    border-radius: 2rem;
+
+
+    &:hover {
+        color: $d_blue;
+        background-color: $white;
+        border-color: $deep_blue;
+    }
+
+    i{
+        color: #3EAAD9;
+        font-size: 1.25em;
+        margin-right: .25rem;
+    }
+}
+
+
+.btn_orange-fill {
+    transition: all .3s ease-in-out;
+    background-color: $orange;
+    color: $white;
+    padding: .5rem 1rem;
+    border-radius: .25rem;
+    border: 1px solid transparent;
+
+    &:hover {
+        color: $black;
+        background-color: $white;
+        border-color: $orange;
+    }
+}
+
+
+//generic styling
+
+.container {
+    max-width: 85rem;
+}
+
+.container_md{
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.container_sm{
+    max-width: 70rem;
+}
+    
+.sec_space{
+    padding: 3rem 0;
+}
+
+
+
+.sec_heading {
+    text-align: center;
+
+
+    h2 {
+        color: $white;
+        font-size: calc(1rem + 1.5vw);
+        margin-bottom: 1rem;
+        
+
+        span {
+            color: $yellow;
+
+        }
+    }
+
+    p{
+        font-size: .7em;
+        color: $white;
+    }
+
+
+}
+
+
+
+
+
+
+//styling of info_sec
+
+.info_sec{
+    background-color: $see-blue;
+    margin-top: 5rem;
+}
+
+.info_text{
+    h2{
+        margin-bottom: 1rem;
+        line-height: calc(2rem + .5rem);
+        font-weight: 700;
+        color: $l_blue;
+        font-size: calc(1.3rem + .75vw);
+    }
+}
+
+
+.form_inner{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form_row{
+    flex: 49%;
+    max-width: 49%;
+
+    input,textarea{
+        padding: .5rem;
+
+        &:focus{
+            box-shadow: 0 0 0 0.15rem rgb(0 0 0 / 5.5%);
+            border-color: #eaeaea;
+            
+        }
+    }
+}
+
+.form_label{
+    margin-bottom: 0;
+    font-size: .7em;
+}
+
+
+.city_list{
+    width: 100%;
+    padding: .53rem;
+    border: 1px solid #CED4DA;
+    font-size: 1.2rem;
+    border-radius: .25rem;
+    color: #798299;
+}
+
+.city_list:focus-visible {
+    outline: -webkit-focus-ring-color auto 0;
+}
+.form_text-box{
+    flex: 100%;
+    max-width: 100%;
+
+    textarea{
+        width: 100%;
+        border-color: #CED4DA;
+        border-radius: .25rem;
+
+        &:focus-visible{
+            outline: 0;
+        }
+
+    }
+}
+
+.form_btn-wrap{
+    margin-top: 1rem;
+}
+
+
+
+//styling of contact_sec
+
+
+
+@media(max-width: 992px) {
+    .nav_cont-btn{
+        position: fixed;
+        top: 1.2rem;
+        right: 5rem;
+    }
+
+    .form_row{
+        flex: 100%;
+        max-width: 100%;
+
+        
+    }
+
+    .info_sec [class^='col-']{
+        margin: .5rem 0!important;
+    }
+
+}
+
+
+@media(max-width: 768px){
+
+    
+    .comp_col-md-2{
+        flex: 33.333333%;
+        max-width: 33.333333%;
+
+    }
+
+    
+}
+
+@media(max-width: 576px){
+    .comp_col-md-2{
+        flex: 50%;
+        max-width: 50%;
+
+    }
+
+    
+}
+
+
